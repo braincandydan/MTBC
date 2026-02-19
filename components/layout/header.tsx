@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, Menu } from 'lucide-react';
 import { useCart } from '@/lib/cart-context';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -14,10 +14,40 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold">MTBC</span>
-        </Link>
+      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+        <div className="flex items-center gap-2">
+          {/* Mobile menu */}
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" className="md:hidden">
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Open menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left" className="w-72">
+              <SheetHeader>
+                <SheetTitle>Menu</SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col gap-4 mt-6">
+                <Link
+                  href="/"
+                  className="text-lg font-medium transition-colors hover:text-accent"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/products"
+                  className="text-lg font-medium transition-colors hover:text-accent"
+                >
+                  Shop
+                </Link>
+              </nav>
+            </SheetContent>
+          </Sheet>
+          <Link href="/" className="flex items-center space-x-2">
+            <span className="text-xl font-bold">Uranus&apos;s Hot Sauce</span>
+          </Link>
+        </div>
 
         <nav className="hidden md:flex items-center space-x-6">
           <Link
@@ -30,7 +60,7 @@ export function Header() {
             href="/products"
             className="text-sm font-medium transition-colors hover:text-accent"
           >
-            Products
+            Shop
           </Link>
         </nav>
 

@@ -14,7 +14,7 @@ export default function CartPage() {
 
   if (isLoading) {
     return (
-      <div className="container px-4 py-12">
+      <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
         <div className="space-y-4">
           {Array.from({ length: 3 }).map((_, i) => (
@@ -33,7 +33,7 @@ export default function CartPage() {
 
   if (!cart || cart.lines.length === 0) {
     return (
-      <div className="container px-4 py-12">
+      <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
         <div className="text-center py-12">
           <p className="text-muted-foreground mb-4">Your cart is empty</p>
@@ -46,7 +46,7 @@ export default function CartPage() {
   }
 
   return (
-    <div className="container px-4 py-12">
+    <div className="container mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

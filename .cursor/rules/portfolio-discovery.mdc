@@ -1,0 +1,18 @@
+---
+description: Capture discovery work for portfolio case study
+alwaysApply: true
+---
+
+# Portfolio Discovery Capture
+
+When doing discovery (brand direction, UX decisions, tech choices, research):
+
+1. **Add notes** to `docs/portfolio/discovery-notes.md` with:
+   - Date
+   - Decision or finding
+   - Rationale
+   - Key choices
+
+2. **Save artifacts** (wireframes, mood boards, sketches) to `docs/portfolio/artifacts/` and reference them in discovery notes
+
+3. **Before starting major features**, consider: "What would a client want to see in a case study?" Document that thinking.

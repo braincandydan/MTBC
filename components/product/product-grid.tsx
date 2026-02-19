@@ -38,7 +38,7 @@ export function ProductGrid({ products, isLoading }: ProductGridProps) {
         animate={{ opacity: 1 }}
         className="text-center py-12"
       >
-        <p className="text-muted-foreground">No products found.</p>
+        <p className="text-muted-foreground">No sauces found.</p>
       </motion.div>
     );
   }

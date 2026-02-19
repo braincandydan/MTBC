@@ -1,0 +1,14 @@
+---
+description: Update portfolio checklist when completing MVP-related work
+alwaysApply: true
+---
+
+# Portfolio Milestone Tracker
+
+When completing a feature or fix that maps to an MVP item in `docs/portfolio/MVP_CHECKLIST.md`:
+
+1. **Update the checklist**: Mark the corresponding item complete (change `[ ]` to `[x]`)
+2. **Capture evidence**: Add screenshot path, URL, or brief note in the Evidence column
+3. **Log decisions**: If significant trade-offs were made, add a note to the relevant `docs/portfolio/*.md` file (e.g., `01-technical-responsiveness.md`)
+
+MVP items map to: responsive design, performance, accessibility, SEO, cart/checkout, error states, clean code, design polish, imagery, branding, case study, live demo, discovery artifacts, tech stack.

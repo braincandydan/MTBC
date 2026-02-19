@@ -45,7 +45,7 @@ export default function CheckoutPage() {
 
   if (isLoading) {
     return (
-      <div className="container px-4 py-12">
+      <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Checkout</h1>
         <div className="space-y-4">
           <Skeleton className="h-64 w-full" />
@@ -57,7 +57,7 @@ export default function CheckoutPage() {
 
   if (!cart || cart.lines.length === 0) {
     return (
-      <div className="container px-4 py-12">
+      <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Checkout</h1>
         <div className="text-center py-12">
           <p className="text-muted-foreground mb-4">Your cart is empty</p>
@@ -70,7 +70,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="container px-4 py-12">
+    <div className="container mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-8">Checkout</h1>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-3 gap-8">

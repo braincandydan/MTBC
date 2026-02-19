@@ -45,9 +45,10 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
-  /* MTBC Brand Colors - Fox Racing Inspired */
+  /* Uranus's Hot Sauce - Space/Hot Sauce Brand */
   --color-trail-black: #1A1A1A;
   --color-trail-orange: #FF6B35;
+  --color-cosmic-purple: #2d1b4e;
   --color-mud-brown: #4A4A4A;
   --color-raw-aluminum: #C0C0C0;
   --color-clean-white: #FFFFFF;
@@ -61,7 +62,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  /* Fox Racing-inspired: Black primary, Orange accent */
+  /* Uranus's Hot Sauce: Black primary, Orange accent */
   --primary: oklch(0.05 0 0); /* Deep black #0A0A0A */
   --primary-foreground: oklch(1 0 0); /* White */
   --secondary: oklch(0.97 0 0);
@@ -73,7 +74,7 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: oklch(0.7 0.15 30); /* Orange ring for focus */
+  --ring: oklch(0.7 0.15 30); /* Hot sauce orange for focus */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);

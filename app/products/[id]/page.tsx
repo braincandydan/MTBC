@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { getProduct } from '@/lib/shopify';
-import { ProductViewer } from '@/components/3d/product-viewer';
 import { ProductDetailClient } from './product-detail-client';
 import { formatPrice } from '@/lib/utils';
 
@@ -20,7 +19,7 @@ export async function generateMetadata({ params }: ProductPageProps) {
   }
 
   return {
-    title: `${product.title} - Shop3D`,
+    title: `${product.title} - Uranus's Hot Sauce`,
     description: product.description,
   };
 }
@@ -33,35 +32,23 @@ export default async function ProductPage({ params }: ProductPageProps) {
     notFound();
   }
 
-  const modelMetafield = product.metafields.find(
-    (m) => m.namespace === 'custom' && m.key === 'model_3d'
-  );
-  const modelUrl = modelMetafield?.value || null;
   const primaryImage = product.images[0];
 
   return (
-    <div className="container px-4 py-8">
+    <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-        {/* Product Images / 3D Viewer */}
+        {/* Product Images */}
         <div className="space-y-4">
-          <div className="aspect-square w-full rounded-lg overflow-hidden bg-muted">
-            {modelUrl ? (
-              <ProductViewer
-                modelUrl={modelUrl}
-                fallbackImage={primaryImage?.url}
-                className="w-full h-full"
+          <div className="aspect-square w-full rounded-lg overflow-hidden bg-muted relative flex items-center justify-center">
+            {primaryImage ? (
+              <Image
+                src={primaryImage.url}
+                alt={primaryImage.altText || product.title}
+                fill
+                className="object-cover"
               />
             ) : (
-              <div className="relative w-full h-full">
-                {primaryImage && (
-                  <Image
-                    src={primaryImage.url}
-                    alt={primaryImage.altText || product.title}
-                    fill
-                    className="object-cover"
-                  />
-                )}
-              </div>
+              <span className="text-muted-foreground text-sm">No image available</span>
             )}
           </div>
           {product.images.length > 1 && (
@@ -86,6 +73,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
         {/* Product Info */}
         <div className="space-y-6">
           <div>
+            <span className="inline-block text-xs font-bold text-[#FF6B35] uppercase tracking-wide mb-2">
+              {product.productType} Heat
+            </span>
             <h1 className="text-3xl md:text-4xl font-bold mb-2">{product.title}</h1>
             <p className="text-2xl font-semibold text-muted-foreground">
               {formatPrice(product.variants[0]?.price.amount || '0', product.variants[0]?.price.currencyCode || 'USD')}

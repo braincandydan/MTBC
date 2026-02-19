@@ -1,0 +1,16 @@
+---
+description: Keep case study draft updated after milestones
+alwaysApply: true
+---
+
+# Portfolio Case Study Maintenance
+
+After each significant milestone, update `docs/portfolio/CASE_STUDY_DRAFT.md` with:
+
+- **What was built**: Brief description of the completed work
+- **Key decisions**: Rationale and trade-offs worth highlighting
+- **Screenshots/links**: Add placeholder paths or URLs (e.g., `[screenshot: hero-mobile]`) if not yet available
+
+Use the structure: Problem / Approach / Solution / Results / Tech Stack.
+
+The draft should stay current so it's ready to finalize when the project goes live. Do not wait until the end to write the case study.

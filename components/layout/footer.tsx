@@ -3,12 +3,12 @@ import Link from 'next/link';
 export function Footer() {
   return (
     <footer className="border-t bg-background">
-      <div className="container px-4 py-8">
+      <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-semibold mb-4">MTBC</h3>
+            <h3 className="font-semibold mb-4">Uranus&apos;s Hot Sauce</h3>
             <p className="text-sm text-muted-foreground">
-              Built for the Trail. Premium mountain bike components engineered for performance.
+              Out of This World Hot Sauce. Hand-crafted, small-batch sauces with cosmic flavor.
             </p>
           </div>
           <div>
@@ -16,17 +16,22 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/products" className="text-muted-foreground hover:text-accent">
-                  All Products
+                  All Sauces
                 </Link>
               </li>
               <li>
-                <Link href="/products?category=cockpit" className="text-muted-foreground hover:text-accent">
-                  Cockpit
+                <Link href="/products/uranus-original" className="text-muted-foreground hover:text-accent">
+                  Uranus&apos;s Original
                 </Link>
               </li>
               <li>
-                <Link href="/products?category=pedals" className="text-muted-foreground hover:text-accent">
-                  Pedals
+                <Link href="/products/cosmic-inferno" className="text-muted-foreground hover:text-accent">
+                  Cosmic Inferno
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/nebula-mild" className="text-muted-foreground hover:text-accent">
+                  Nebula Mild
                 </Link>
               </li>
             </ul>
@@ -63,8 +68,8 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} MTBC - Mountain Bike Components. All rights reserved.</p>
-          <p className="mt-2 text-xs">Built for the Trail</p>
+          <p>&copy; {new Date().getFullYear()} Uranus&apos;s Hot Sauce. All rights reserved.</p>
+          <p className="mt-2 text-xs">Out of This World Hot Sauce</p>
         </div>
       </div>
     </footer>

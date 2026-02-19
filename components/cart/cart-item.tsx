@@ -53,7 +53,7 @@ export function CartItem({ line }: CartItemProps) {
           <p className="text-sm text-muted-foreground">{line.merchandise.title}</p>
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <div className="flex items-center gap-2">
             <Button
               variant="outline"

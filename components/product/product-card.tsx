@@ -55,7 +55,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
         </Link>
         <CardFooter className="p-6 pt-0">
           <Button asChild className="w-full bg-black hover:bg-gray-800 text-white font-bold">
-            <Link href={`/products/${product.handle}`}>View Product</Link>
+            <Link href={`/products/${product.handle}`}>View Sauce</Link>
           </Button>
         </CardFooter>
       </Card>

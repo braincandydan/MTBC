@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MTBC - Mountain Bike Components | Built for the Trail",
-  description: "Premium mountain bike components engineered for performance. Handlebars, pedals, stems, and more - built for the trail.",
+  title: "Uranus's Hot Sauce - Out of This World Hot Sauce",
+  description: "Uranus's Hot Sauce brings the heat from another dimension. Hand-crafted, small-batch hot sauces with cosmic flavor. Mild, Medium, and Hot options for every heat seeker.",
 };
 
 export default function RootLayout({
